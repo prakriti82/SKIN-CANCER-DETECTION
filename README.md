@@ -74,6 +74,3 @@ The skin cancer detection model, trained on the Skin Cancer Binary Classificatio
 
 - The Skin Cancer Binary Classification Dataset used in this project was sourced from Kaggle: [Skin Cancer Binary Classification Dataset](https://www.kaggle.com/datasets/kylegraupe/skin-cancer-binary-classification-dataset).
 
-## License
-
-This project is licensed under the [MIT License](LICENSE).
