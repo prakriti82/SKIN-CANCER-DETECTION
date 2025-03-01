@@ -1,6 +1,10 @@
-# Skin Cancer Detection Model
+# Skin Cancer Detection System
 
-This repository contains Python code for generating a skin cancer detection model and using it to detect skin cancer from user-inputted images or videos. The model architecture is as follows:
+This project provides a Python-based approach for detecting skin cancer from both images and live video feeds. Utilizing deep learning techniques, the system classifies skin lesions into cancerous and non-cancerous categories.
+
+## Model Architecture
+
+The implemented Convolutional Neural Network (CNN) consists of multiple layers designed for feature extraction and classification:
 
 ```python
 model = Sequential()
@@ -19,58 +23,54 @@ model.add(Dense(512, activation='relu'))
 model.add(Dense(1, activation='sigmoid'))
 ```
 
-## Dataset
+## Dataset Information
 
-The dataset used for training and evaluation can be downloaded from Kaggle: [Skin Cancer Binary Classification Dataset](https://www.kaggle.com/datasets/kylegraupe/skin-cancer-binary-classification-dataset). It provides labeled images for binary classification of skin cancer.
+The dataset used for training is available on Kaggle: [Skin Cancer Binary Classification Dataset](https://www.kaggle.com/datasets/kylegraupe/skin-cancer-binary-classification-dataset). This dataset includes labeled skin lesion images for binary classification.
 
-## Dependencies
+## Prerequisites
 
-To run the code in this repository, you'll need the following dependencies:
-
-- Python 3.x
-- TensorFlow
-- Keras
-- NumPy
-- OpenCV
-
-You can install the required packages using `pip`:
+To set up and run this project, install the necessary dependencies:
 
 ```shell
 pip install tensorflow keras numpy opencv-python
 ```
 
-## Usage
+Ensure you have Python 3.x installed before running the above command.
 
-1. Clone this repository to your local machine:
+## How to Use
+
+1. Clone this repository:
 
 ```shell
 git clone https://github.com/your-username/your-repository.git
 cd your-repository
 ```
 
-2. Download the Skin Cancer Binary Classification Dataset from the provided link and place it in the appropriate directory.
+2. Download the dataset from the given Kaggle link and store it in the relevant directory.
 
-3. Use the provided code to train the skin cancer detection model.
+3. Train the model using the provided script.
 
-4. Run the script to detect skin cancer from an image:
-
-```shell
-python predict_image.py --image path/to/your/image.jpg
-```
-
-5. Run the script to detect skin cancer from a video:
+4. To perform skin cancer detection on an image:
 
 ```shell
-python predict_video.py --video path/to/your/video.mp4
+python predict_image.py --image path/to/image.jpg
 ```
 
-Make sure to replace `path/to/your/image.jpg` and `path/to/your/video.mp4` with the actual paths to your desired image and video files, respectively.
+5. To analyze a video file:
 
-## Results
+```shell
+python predict_video.py --video path/to/video.mp4
+```
 
-The skin cancer detection model, trained on the Skin Cancer Binary Classification Dataset, can accurately classify skin cancer from images and videos. You can modify the code and experiment with different architectures or hyperparameters to potentially improve the performance.
+Replace `path/to/image.jpg` and `path/to/video.mp4` with actual file locations.
 
-## Acknowledgments
+## Performance & Results
 
-- The Skin Cancer Binary Classification Dataset used in this project was sourced from Kaggle: [Skin Cancer Binary Classification Dataset](https://www.kaggle.com/datasets/kylegraupe/skin-cancer-binary-classification-dataset).
+The trained CNN model provides effective classification of skin lesions with high accuracy. Users can fine-tune the model by adjusting hyperparameters or modifying the architecture for improved performance.
+
+## Credits
+
+- The dataset used in this project is sourced from Kaggle: [Skin Cancer Binary Classification Dataset](https://www.kaggle.com/datasets/kylegraupe/skin-cancer-binary-classification-dataset).
+
+
 
